@@ -15,7 +15,9 @@ export default defineComponent({
   <div class="ft-layout">
     <TheMenubar />
     <TheSidebar />
-    <TheContainer />
+    <TheContainer>
+      <slot />
+    </TheContainer>
   </div>
 </template>
 <style scoped>

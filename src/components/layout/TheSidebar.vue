@@ -2,35 +2,29 @@
 import axios from "axios";
 import { defineComponent, reactive } from "vue";
 import { RepositoryAPI } from "../../api/repositoryApi";
+import BaseButton from "../Base/BaseButton.vue";
 const sourceTypeApi = RepositoryAPI.get("sourceType");
-
-// type Category = {
-//   ID: string;
-//   Name: string;
-//   Type: string;
-//   UpdatedAt: string;
-//   CreatedAt: string;
-// };
-
-// let allCategories: Category[] = reactive([]);
-
-// async function getAllItemSource() {
-//   try {
-//     await axios
-//       .get("http://localhost:8080/v1/" + "item-sources")
-//       .then(function (res) {
-//         allCategories = res.data.data;
-//         console.log(allCategories);
-//       });
-//   } catch (error) {}
-// }
-
-// getAllItemSource();
 
 export default defineComponent({
   data() {
     return {
-      allCategories: reactive([]),
+      allCategories: [
+        {
+          id: "1",
+          name: "Project",
+          path: "/project",
+        },
+        {
+          id: "2",
+          name: "Investment",
+          path: "/investment",
+        },
+        {
+          id: "3",
+          name: "Salary",
+          path: "/salary",
+        },
+      ],
       baseURL: "http://localhost:8080/v1/",
     };
   },
@@ -49,6 +43,7 @@ export default defineComponent({
       } catch (error) {}
     },
   },
+  components: { BaseButton },
 });
 </script>
 
@@ -56,9 +51,12 @@ export default defineComponent({
   <div class="sidebar">
     <div class="sidebar-category">
       <p>CATEGORIES</p>
-      <ul>
-        <li v-for="category in allCategories" :key="category.ID">
-          {{ category.Name }}
+      <ul class="categories">
+        <li v-for="category in allCategories" :key="category.id">
+          <RouterLink to="/">{{ category.name }}</RouterLink>
+        </li>
+        <li>
+          <BaseButton text="Add Category" variant="transparent" class="pl-0" />
         </li>
       </ul>
     </div>
@@ -67,9 +65,30 @@ export default defineComponent({
 <style scoped>
 .sidebar {
   background: #fafafa;
-  padding: 40px 10px 20px 10px;
+  padding: 40px 10px 20px 32px;
 }
 .sidebar-category p {
+  font-family: "PoppinB";
   font-weight: 700;
+  font-size: 12px;
+}
+
+.sidebar-category .categories {
+  margin-top: 28px;
+}
+
+.sidebar-category .categories li {
+  margin-bottom: 20px;
+}
+
+.sidebar-category .categories li a {
+  font-family: "PoppinM";
+  font-size: 16px;
+  color: #747474;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-category .categories li a:hover {
+  color: #8700a1;
 }
 </style>

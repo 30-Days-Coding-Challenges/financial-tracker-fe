@@ -59,14 +59,43 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "PoppinBL";
+  src: url("./fonts/Poppins-Black.ttf");
+}
+@font-face {
+  font-family: "PoppinB";
+  src: url("./fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "PoppinR";
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "PoppinT";
+  src: url("./fonts/Poppins-Thin.ttf");
+}
+@font-face {
+  font-family: "PoppinSB";
+  src: url("./fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: "PoppinL";
+  src: url("./fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: "PoppinM";
+  src: url("./fonts/Poppins-Medium.ttf");
+}
+
+
 body {
   min-height: 100vh;
   color: #545356;
   background: #ffffff;
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: "PoppinR";
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -76,4 +105,46 @@ body {
 ul{
   padding-inline-start: 0px;
   list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.flex{
+  display: flex;
+}
+
+.text-bold{
+  font-family: "PoppinB";
+}
+.text-medium{
+  font-family: "PoppinM";
+}
+.text-semibold{
+  font-family: "PoppinSB";
+}
+
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+.ml-auto{
+  margin-left: auto;
+}
+.mr-auto{
+  margin-right: auto;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.pl-0{
+  padding-left: 0px !important;
 }
