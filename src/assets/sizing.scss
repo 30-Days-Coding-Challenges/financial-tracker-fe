@@ -1,0 +1,161 @@
+.ml-auto{
+  margin-left: auto;
+}
+.mr-auto{
+  margin-right: auto;
+}
+// ======= margin sizing ===========
+$variant-size: 20;
+$multiplies: 4px;
+
+@mixin mb-x-list {
+  @for $i from 0 through $variant-size {
+    .mb-#{$i} {
+      margin-bottom: $i * $multiplies;
+    }
+  }
+}
+@mixin mt-x-list {
+  @for $i from 0 through $variant-size {
+    .mt-#{$i} {
+      margin-top: $i * $multiplies;
+    }
+  }
+}
+@mixin mr-x-list {
+  @for $i from 0 through $variant-size {
+    .mr-#{$i} {
+      margin-right: $i * $multiplies;
+    }
+  }
+}
+@mixin ml-x-list {
+  @for $i from 0 through $variant-size {
+    .ml-#{$i} {
+      margin-left: $i * $multiplies;
+    }
+  }
+}
+@mixin m-x-list {
+  @for $i from 0 through $variant-size {
+    .m-#{$i} {
+      margin: $i * $multiplies;
+    }
+  }
+}
+@mixin mx-list {
+  @for $i from 0 through $variant-size {
+    .mx-#{$i} {
+      margin-left: $i * $multiplies;
+      margin-right: $i * $multiplies;
+    }
+  }
+}
+@mixin my-list {
+  @for $i from 0 through $variant-size {
+    .my-#{$i} {
+      margin-top: $i * $multiplies;
+      margin-bottom: $i * $multiplies;
+    }
+  }
+}
+
+@include mb-x-list;
+@include mt-x-list;
+@include mr-x-list;
+@include ml-x-list;
+@include m-x-list;
+@include mx-list;
+@include my-list;
+// ======= margin sizing ===========
+// ======= margin sizing ===========
+$variant-size-padding: 20;
+$multiplies-padding: 4px;
+
+@mixin pb-x-list {
+  @for $i from 0 through $variant-size-padding {
+    .pb-#{$i} {
+      padding-bottom: $i * $multiplies-padding;
+    }
+  }
+}
+@mixin pt-x-list {
+  @for $i from 0 through $variant-size-padding {
+    .pt-#{$i} {
+      padding-top: $i * $multiplies-padding;
+    }
+  }
+}
+@mixin pr-x-list {
+  @for $i from 0 through $variant-size-padding {
+    .pr-#{$i} {
+      padding-right: $i * $multiplies-padding;
+    }
+  }
+}
+@mixin pl-x-list {
+  @for $i from 0 through $variant-size-padding {
+    .pl-#{$i} {
+      padding-left: $i * $multiplies-padding;
+    }
+  }
+}
+@mixin p-x-list {
+  @for $i from 0 through $variant-size-padding {
+    .p-#{$i} {
+      padding: $i * $multiplies-padding;
+    }
+  }
+}
+@mixin px-list {
+  @for $i from 0 through $variant-size-padding {
+    .px-#{$i} {
+      padding-left: $i * $multiplies-padding;
+      padding-right: $i * $multiplies-padding;
+    }
+  }
+}
+@mixin py-list {
+  @for $i from 0 through $variant-size-padding {
+    .py-#{$i} {
+      padding-top: $i * $multiplies-padding;
+      padding-bottom: $i * $multiplies-padding;
+    }
+  }
+}
+
+@include pb-x-list;
+@include pt-x-list;
+@include pr-x-list;
+@include pl-x-list;
+@include p-x-list;
+@include px-list;
+@include py-list;
+// ======= margin sizing ===========
+
+// ======= width sizing ============
+$variant-size-width: 10;
+$multiplies-width: 10%;
+@mixin w-x-list {
+  @for $i from 1 through $variant-size-width {
+    .w-#{$i*10} {
+      width: $i * $multiplies-width;
+    }
+  }
+}
+
+@include w-x-list;
+// ======= width sizing ============
+// ======= text sizing ============
+$variant-size-text: 14;
+$multiplies-text: 4px;
+@mixin txt-x-list {
+  @for $i from 1 through $variant-size-text {
+    .txt-#{$i} {
+      font-size: $i * $multiplies-text;
+    }
+  }
+}
+
+@include txt-x-list;
+// ======= text sizing ============

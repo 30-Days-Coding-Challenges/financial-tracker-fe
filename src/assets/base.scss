@@ -1,0 +1,40 @@
+@import "./sizing.scss";
+@import "./text.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+
+body {
+  min-height: 100vh;
+  color: #545356;
+  background: #ffffff;
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: "PoppinR";
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul{
+  padding-inline-start: 0px;
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.d-flex{
+  display: flex;
+  flex-direction: row;
+}
+
